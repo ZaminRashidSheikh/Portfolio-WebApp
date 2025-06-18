@@ -1,8 +1,8 @@
 {
-  "name": "3d-portfolio-website",
-  "homepage": "https://ZaminRashidSheikh.github.io/Portfolio-WebApp",
+  "name": "portfolio-webapp",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://zaminrashidsheikh.github.io/portfolio-webapp",
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
     "@emotion/react": "^11.11.3",
@@ -37,7 +37,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
