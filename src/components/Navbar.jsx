@@ -26,6 +26,7 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   font-size: 1rem;
 `;
+
 const NavLogo = styled(LinkR)`
   width: 80%;
   padding: 0 6px;
@@ -61,18 +62,15 @@ const NavLink = styled.a`
 `;
 
 const ButtonContainer = styled.div`
-  width: 80%;
-  height: 100%;
   display: flex;
-  justify-content: end;
   align-items: center;
-  padding: 0 6px;
+  gap: 12px;
   @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
-const GithubButton = styled.a`
+const ProfileButton = styled.a`
   border: 1px solid ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.primary};
   justify-content: center;
@@ -80,10 +78,10 @@ const GithubButton = styled.a`
   align-items: center;
   border-radius: 20px;
   cursor: pointer;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 8px 16px;
+  font-size: 14px;
   font-weight: 500;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.4s ease-in-out;
   text-decoration: none;
   &:hover {
     background: ${({ theme }) => theme.primary};
@@ -92,10 +90,6 @@ const GithubButton = styled.a`
 `;
 
 const MobileIcon = styled.div`
-  height: 100%;
-  display: flex;
-  align-items: center;
-  color: ${({ theme }) => theme.text_primary};
   display: none;
   @media screen and (max-width: 768px) {
     display: block;
@@ -108,20 +102,16 @@ const MobileMenu = styled.ul`
   flex-direction: column;
   align-items: start;
   gap: 16px;
-  padding: 0 6px;
-  list-style: none;
-  width: 100%;
   padding: 12px 40px 24px 40px;
   background: ${({ theme }) => theme.card_light + 99};
   position: absolute;
   top: 80px;
   right: 0;
-
   transition: all 0.6s ease-in-out;
   transform: ${({ isOpen }) =>
     isOpen ? "translateY(0)" : "translateY(-100%)"};
   border-radius: 0 0 20px 20px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   z-index: ${({ isOpen }) => (isOpen ? "1000" : "-1000")};
 `;
@@ -163,23 +153,22 @@ const Navbar = () => {
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">
               Education
             </NavLink>
-            <GithubButton
-              href={Bio.github}
-              target="_Blank"
-              style={{
-                background: theme.primary,
-                color: theme.text_primary,
-              }}
-            >
+            <ProfileButton href={Bio.github} target="_Blank">
               Github Profile
-            </GithubButton>
+            </ProfileButton>
+            <ProfileButton href="https://leetcode.com/YourLeetCodeUsername/" target="_Blank">
+              LeetCode Profile
+            </ProfileButton>
           </MobileMenu>
         )}
 
         <ButtonContainer>
-          <GithubButton href={Bio.github} target="_Blank">
+          <ProfileButton href={Bio.github} target="_Blank">
             Github Profile
-          </GithubButton>
+          </ProfileButton>
+          <ProfileButton href="https://leetcode.com/u/Zamin_Rashid_Sheikh/" target="_Blank">
+            LeetCode Profile
+          </ProfileButton>
         </ButtonContainer>
       </NavbarContainer>
     </Nav>

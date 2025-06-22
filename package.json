@@ -2,7 +2,7 @@
   "name": "portfolio-webapp",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://zaminrashidsheikh.github.io/portfolio-webapp",
+  "homepage": "https://ZaminRashidSheikh.github.io/Portfolio-WebApp",
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
     "@emotion/react": "^11.11.3",
